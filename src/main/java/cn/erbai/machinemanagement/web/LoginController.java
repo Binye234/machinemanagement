@@ -51,4 +51,9 @@ public class LoginController {
         userService.insertUser(user);
         return "index";
     }
+    @GetMapping("test")
+    public String test(){
+        System.out.println("test is run");
+        return "index";
+    }
 }

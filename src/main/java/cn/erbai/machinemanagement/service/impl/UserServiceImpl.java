@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService {
         Md5Hash md5Hash=new Md5Hash(user.getPassword(),salt,5);
         user.setPassword(md5Hash.toHex());
         userDao.insertUser(user);
+
     }
 
     @Override
